@@ -1,0 +1,60 @@
+#imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this based on your layout */
+    flex-direction: column;
+}
+
+#imageContainer {
+    position: relative;
+    margin-top: 2vmin;
+}
+.salute {
+    position: relative;
+    width: 12ch;
+    margin-top: 2vmin;
+    font-size: 11vmin;
+    font-weight: 400;
+    margin-bottom: 0;
+    animation: typing 2s steps(12), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    border-right: 3px solid;
+    font-family: arial serif;
+}
+ul:before{
+    content:attr(aria-label);
+    font-size:120%;
+    font-weight:bold;
+    margin-left:-15px;
+}
+#meanings{
+    display: flex;
+    align-items: flex-start;
+}
+.symbol img {
+    width: 32px;
+    height: 32px;
+  }
+.symbol{
+    align-self: flex-end;
+}
+.temperatures{
+    align-self: flex-start;
+}
+@media screen and (max-width: 767px) {
+    #meanings{
+        flex-direction: column; /* Colocar elementos en columna */
+    }
+  }
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}

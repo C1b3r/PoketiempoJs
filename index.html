@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Map</title>
+
+    <link rel="stylesheet" href="./scripts/styles.css">
+</head>
+<body>
+   
+<div id="imageWrapper">
+    <div class="salute">Poketiempo</div>
+    <div id="imageContainer">
+       <canvas id="mapCanvas" width="640" height="513"></canvas>
+    </div>
+    <button type="button" title="Descargar imagen" id="saveImageBtn">Descargar imagen</button>
+    <div id="meanings">
+        <aside class="temperatures">
+            <ul aria-label="Temperaturas asociadas a los símbolos:">
+                <li>Helado => menos de 6º</li>
+                <li>Frío =>  6º-16º</li>
+                <li>Soleado => 16º-26º</li>
+                <li>Caluroso =>26º-30º</li>
+                <li>Muy caluroso => 30º-34º</li>
+                <li>Sofocante => 34º-40º</li>
+                <li>Volcánico => Más de 40º</li>
+            </ul>
+        </aside>
+        <aside class="symbol">
+            <ul aria-label="Significado de las imágenes">
+                <li>Tormenta => <img title="Tormenta" alt="Tormenta" src="./sprites/tormenta.png" width="32" height="32"></li>
+                <li>Lluvia => <img title="Lluvia" alt="Lluvia" src="./sprites/lluvia.png" width="32" height="32"></li>
+                <li>Llovizna => <img title="Llovizna" alt="Llovizna" src="./sprites/lluvia2.png" width="32" height="32"></li>
+                <li>Nuboso => <img title="Nuboso" alt="Nuboso" src="./sprites/nuboso.png" width="32" height="32"></li>
+                <li>Niebla => <img title="Niebla" alt="Niebla" src="./sprites/mist.png" width="32" height="32"></li>
+                <li>Nieve => <img title="Nieve (frio)" alt="Nieve" src="./sprites/nieve.png" width="32" height="32"></li>
+                <li>Nieve intensa => <img title="Nieve intensa" alt="Nieve intensa (mucho frio)" src="./sprites/nieve2.png" width="32" height="32"></li>
+                <li>Frío => <img title="Frío" alt="Frío" src="./sprites/frio.png" width="32" height="32"></li>
+                <li>Helado => <img title="Helado (mucho frío)" alt="Helado (mucho frío)" src="./sprites/helado.png" width="32" height="32"></li>
+                
+                <li>Soleado => <img title="Soleado" alt="Soleado" src="./sprites/sol.png" width="32" height="32"></li>
+                <li>Caluroso => <img title="Caluroso" alt="Caluroso" src="./sprites/sol2.png" width="32" height="32"></li>
+                <li>Muy caluroso => <img title="Muy caluroso" alt="Muy caluroso" src="./sprites/calor.png" width="32" height="32"></li>
+                <li>Sofocante => <img title="Sofocante" alt="Sofocante" src="./sprites/calor2.png" width="32" height="32"></li>
+                <li>Volcánico => <img title="Volcánico" alt="Volcánico" src="./sprites/calor3.png" width="32" height="32"></li>
+            </ul>
+        </aside>
+    </div>
+</div>
+
+
+
+<section id="coordinates"></section>
+
+
+<script src="scripts/definitions.js"></script>
+<script src="scripts/env.js"></script>
+<script src="scripts/scripts.js?v=0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+
+</body>
+</html>
